@@ -1,0 +1,771 @@
+@charset "UTF-8";
+
+@import './common.css';
+@import './layout.css';
+@import './central.css';
+@import './board.css';
+@import './tab.css';
+
+/*
+  Class name is start with 'new-jebid-'.
+  All codes below shown is published by JCORPORATIONTECH
+  Date : 2018.04.11
+  Author: JCORP.
+  Email : j.lee@jcorporationtech.com
+*/
+
+/* font settings */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
+
+.new-jebid-body{
+  font-family: 'Nanum Gothic', sans-serif !important;
+  color: #373737 !important;
+  background: #f9f9f9;
+  font-weight: 400;
+}
+
+/* start common class */
+.new-jebid-ft-light{
+  font-weight: normal;
+}
+
+.new-jebid-ft-bold{
+  font-weight: 700 !important;
+}
+
+.new-jebid-setMaxWidth__common {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.new-jebid-clearfix:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.new-jebid-pull-left{
+  float: left;
+}
+
+.new-jebid-pull-right{
+  float: right;
+}
+
+.new-jebid-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.new-jebid-blind{
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* end common class */
+
+/* start layout */
+.new-jebid-header{
+  position: relative;
+  background:#fff url('../images/bg_header.gif') repeat-x 0 bottom;
+}
+
+.new-jebid-header-inner{
+  position: relative;
+  height: 91px;
+}
+
+.new-jebid-logo{
+  position: absolute;
+  bottom: 22px;
+  left: 50px;
+}
+
+.new-jebid-left-area{
+  width: 269px;
+  float: left;
+}
+
+.new-jebid-content-section{
+  width: 545px;
+  float: left;
+  margin: 0 8px;
+}
+
+.new-jebid-aside-article{
+  width: 269px;
+  float: left;
+}
+
+.new-jebid-submenu-bg{
+  position: absolute;
+  top: 91px;
+  left: 0;
+  width: 100%;
+  height: 37px;
+  background: #fff;
+  display: none;
+}
+
+.new-jebid-contents{
+  margin-top: 37px;
+  margin-bottom: 42px;
+}
+
+.new-jebid-nav{
+  position: absolute;
+  width: 768px;
+  top: 52px;
+  left: 50%;
+  margin-left: -216px;
+}
+
+.new-jebid-nav-wrp{
+  position: relative;
+}
+
+.new-jebid-nav-list{
+  float: left;
+  margin-right: 60px;
+  text-align: center;
+}
+
+
+.new-jebid-nav-list:last-child{
+  margin-right: 0;
+}
+
+.new-jebid-nav-link{
+  font-size: 16px;
+  font-weight: bold;
+  color: #373737;
+  padding-bottom: 21px;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-nav-link:hover,
+.new-jebid-nav__active{
+  color: #2066b4;
+}
+
+.new-jebid-nav:hover + .new-jebid-submenu-bg{
+  display: block;
+}
+
+.new-jebid-submenu-bg:hover{
+  display: block;
+}
+
+
+.new-jebid-nav-sub-list-wrp{
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  z-index: 110;
+  display: none;
+}
+
+.new-jebid-nav-sub-link{
+  height: 37px;
+  line-height: 37px;
+  display: inline-block;
+
+}
+
+.new-jebid-nav-list:hover .new-jebid-nav-link{
+  color: #2066b4;
+}
+
+.new-jebid-nav-list:hover > .new-jebid-nav-sub-list-wrp{
+  display: block !important;
+}
+
+.new-jebid-nav-sub-list{
+  float: left;
+  margin-right: 25px;
+}
+
+.new-jebid-nav-sub-list:last-child{
+  margin-right: 0;
+}
+
+.new-jebid-nav-sub-link{
+  font-size: 15px;
+  font-weight: bold;
+  color: #545454;
+}
+
+
+.new-jebid-nav-sub-link:hover,
+.new-jebid-nav__active{
+  color: #2066b4;
+}
+
+.new-jebid-nav-list:nth-child(2) .new-jebid-nav-sub-list-wrp{
+  padding-left: 115px;
+}
+
+.new-jebid-nav-list:nth-child(3) .new-jebid-nav-sub-list-wrp{
+  padding-left: 234px;
+}
+
+.new-jebid-nav-list:nth-child(4) .new-jebid-nav-sub-list-wrp{
+  padding-left: 335px;
+}
+
+.new-jebid-nav-list:nth-child(5) .new-jebid-nav-sub-list-wrp{
+  padding-left: 85px;
+}
+
+.new-jebid-nav-list:nth-child(6) .new-jebid-nav-sub-list-wrp{
+  padding-left: 272px;
+}
+
+.new-jebid-nav-list:nth-child(7) .new-jebid-nav-sub-list-wrp{
+  padding-left: 307px;
+}
+
+.new-jebid-footer{
+  border-top: 1px solid #d9d9d9;
+  background: #ededed;
+}
+
+.new-jebid-footer .new-jebid-footer-nav{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-footer-inner{
+  height: 137px;
+}
+
+.new-jebid-footer-link{
+  color: #4e4e4e;
+  font-size: 13px;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-footer-split{
+  color: #9d9d9d;
+  margin: 0 5px;
+}
+
+.new-jebid-ft-addr{
+  line-height: 20px;
+  color: #4e4e4e;
+  font-size: 13px;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-nav-top{
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.new-jebid-link-fave,
+.new-jebid-link-start{
+  color: #35589c;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.new-jebid-link-fave{
+  margin-right: 14px;
+  background: url('../images/bl_star.gif') no-repeat 0 center;
+}
+
+.new-jebid-link-start{
+  background: url('../images/bl_plus.gif') no-repeat 0 center;
+}
+
+/* end layout */
+
+
+/* login area */
+.new-jebid-login-wrp{
+  border: 1px solid #e1e1e1;
+  background: #ebebeb;
+  border-radius: 3px;
+}
+
+.new-jebid-section-title{
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background: #455771;
+  height: 40px;
+  line-height: 40px;
+  font-family: "Nanum Gothic";
+}
+
+.new-jebid-login-inner{
+  padding: 26px 11px;
+}
+
+.new-jebid-btn-register{
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  background: #21a5e6;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  border-radius: 2px;
+  font-family: "Nanum Gothic";
+}
+
+.new-jebid-btn-register:hover{
+  color: #fff !important;
+}
+
+
+.new-jebid-login-input{
+  float: left;
+  width: 169px;
+}
+
+.new-jebid-login-btn{
+  float: left;
+  width: 72px;
+}
+
+.new-jebid-user-id,
+.new-jebid-password{
+  width: 100%;
+  border: 1px solid #cbcbcb;
+  height: 35px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #444;
+  border-radius: 3px;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-user-id{
+  margin-bottom: 8px;
+}
+
+
+.new-jebid-btn-login{
+  height: 78px;
+  line-height: 78px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  background: #1d4e9a;
+  width: 72px;
+  margin-left: 4px;
+  border: none;
+  border-radius: 3px;
+  font-family: "Nanum Gothic";
+}
+
+
+
+.new-jebid-check-boxs{
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+
+label[for="new-jebid-check-store-pw"],
+label[for="new-jebid-check-store-id"]{
+  color: #796e71;
+  font-size: 12px;
+}
+
+
+/* 고객지원센터 */
+.new-jebid-customer-support-wrp{
+  border: 1px solid #ebebeb;
+  background: #fff;
+  margin-top: 8px;
+  border-radius: 3px;
+}
+
+.new-jebid-customer-support-inner{
+  padding: 20px 13px;
+}
+
+.new-jebid-customer-title{
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  background: #2b7aa7;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-cs-info{
+  font-family: 'Nanum Gothic';
+  font-size: 16px;
+  color: #4e4e4e;
+  line-height: 28px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+.new-jebid-register-member{
+  margin-top: 7px;
+  margin-bottom: 6px;
+}
+
+.new-jebid-deposit-info{
+
+}
+
+/* multi-btn-collection */
+.new-jebid-multi-info-btns{
+  margin-top: 7px;
+  margin-bottom: 8px;
+  padding: 10px 5px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.new-jebid-multi-links{
+  float: left;
+}
+
+.new-jebid-multi-links:nth-child(2){
+  margin: 0 2px 0 1px;
+}
+
+.new-jebid-multi-links:last-child{
+  margin-left: 1px;
+}
+
+.new-jebid-current-plan-wrp{
+  margin-top: 8px;
+}
+
+/* aside section start */
+.new-jebid-remote-wrp{
+  margin: 6px 0;
+}
+
+.new-jebid-dataroom{
+  height: 370px;
+  box-sizing: border-box;
+  padding: 25px 20px;
+  background: url('../images/img_bg_dataroom.gif') no-repeat 0 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.new-jebid-dataroom-title{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.new-jebid-data-list-wrp{
+  margin-top: 20px;
+}
+
+.new-jebid-data-list{
+  margin-bottom: 9px;
+  background: url('../images/bl_sqaure.gif') no-repeat 0 center;
+}
+
+.new-jebid-data-link{
+  font-size: 17px;
+  color: #f9f9f9;
+  font-family: 'Nanum Gothic';
+  margin-left: 9px;
+  display: block;
+  width: 200px;
+  background: url('../images/bl_arrow_right.png') no-repeat right center;
+}
+
+.new-jebid-viewer{
+  position: relative;
+  height: 132px;
+  background: url('../images/img_bg_viewer.gif') no-repeat 0 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.new-jebid-shortcut-site{
+  position: relative;
+  height: 133px;
+  background: url('../images/img_bg_shortcut_site.gif') no-repeat 0 0;
+}
+
+.new-jebid-selectbox-bid,
+.new-jebid-selectbox-construction{
+  width: 112px;
+  height: 21px;
+}
+
+.new-jebid-selectbox-bid{
+  position: absolute;
+  top: 44px;
+  right: 30px;
+}
+
+.new-jebid-selectbox-construction{
+  position: absolute;
+  top: 76px;
+  right: 30px;
+}
+
+.new-jebid-view-link{
+  width: 84px;
+  height: 20px;
+  display: block;
+  position: absolute;
+}
+
+.new-jebid-word-btn{
+  top: 40px;
+  left: 83px;
+}
+
+.new-jebid-acrobat-btn{
+  top: 67px;
+  left: 83px;
+}
+
+.new-jebid-hunmin-btn{
+  top: 95px;
+  left: 83px;
+}
+
+.new-jebid-excel-btn{
+  top: 40px;
+  left: 173px;
+}
+
+.new-jebid-hangul-btn{
+  top: 67px;
+  left: 173px;
+}
+
+.new-jebid-ppt-btn{
+  top: 95px;
+  left: 173px;
+}
+
+/* main contents start */
+.new-jebid-success-bid{
+  border: 1px solid #189bd7;
+  /*height: 41px;*/
+  height: 21px;
+}
+
+.new-jebid-bid-title{
+  float: left;
+  width: 129px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  background: #21a5e6;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-marquee-area{
+  float: left;
+  width: 388px;
+  height: 21px;
+  line-height: 21px;
+  background :#ebebeb;
+  color: #4e4e4e;
+  font-size: 13px;
+  font-family: 'Nanum Gothic';
+}
+
+.new-jebid-bid-plus{
+  float: left;
+  width: 26px;
+}
+
+.new-jebid-bid-btn-more{
+  display: block;
+  width: 26px;
+  /*height: 41px;*/
+  height: 21px;
+  background: #189bd7;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 21px;
+}
+
+.new-jebid-bid-btn-more:hover{
+  color: #fff;
+}
+
+.new-jebid-main-centered{
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+
+/* notice */
+.new-jebid-notice-centered{
+  border: 1px solid #ebebeb;
+  background: #fff;
+}
+
+.new-jebid-notice-title{
+  height: 24px;
+  /*height: 36px;*/
+  line-height: 24px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  background: #b8bec7;
+  position: relative;
+  font-family:"Nanum Gothic";
+}
+
+.new-jebid-notice-btn-more{
+  width: 26px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background: #455771;
+  font-size: 20px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.new-jebid-notice-btn-more:hover{
+  color: #fff;
+}
+
+.new-jebid-notice-list-wrp{
+  padding: 20px;
+}
+
+.new-jebid-notice-list{
+  padding-left: 9px;
+  margin-bottom: 11px;
+  background: url('../images/bl_square_grey.jpg') no-repeat 0 center;
+  width: 500px;
+}
+
+.new-jebid-notice-link{
+  display: inline-block;
+  font-size: 14px;
+  color: #4e4e4e;
+}
+
+.new-jebid-multi-notice{
+  position: relative;
+  background: #fff;
+  margin-top: 7px;
+  border: 1px solid #ebebeb;
+}
+
+.new-jebid-notice-board{
+  height: 427px;
+}
+
+.new-jebid-multi-notice-tab-wrp{
+  height: 24px;
+  /*height: 40px;*/
+  width: 520px;
+}
+
+.new-jebid-multi-notice-tab-list{
+  float: left;
+  width: 126px;
+  padding-right: 3px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.new-jebid-multi-notice-tab-link{
+  background: #b8bec7;
+  text-align: center;
+  display: block;
+  line-height: 24px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  font-family:"Nanum Gothic";
+}
+
+.new-jebid-multi-notice-tab-link:hover{
+  color: #fff;
+}
+
+.new-jebid-multi-notice-tab__active{
+  background: #1d4e9a;
+}
+
+/* sub page */
+.new-jebid-sub-content{
+  width: 821px;
+  margin-left: 8px;
+  background: #fff;
+  min-height: 400px;
+  float: left;
+}
+
+.new-jebid-current-indicator{
+  border: 1px solid #efefef;
+  background: #fff;
+}
+
+.new-jebid-current-title{
+  font-size: 26px;
+  line-height: 199px;
+  color: #fff;
+  height: 199px;
+  text-align: center;
+  background: url('../images/bg_current_path.jpg') no-repeat 0 0;
+  font-family: "Nanum Gothic";
+}
+
+
+.new-jebid-current-menu{
+  padding: 30px 20px;
+}
+
+.new-jebid-current-menu-list{
+  border-bottom: 1px solid #a1aab3;
+}
+
+.new-jebid-current-menu-link{
+  color: #444;
+  font-size: 16px;
+  display: block;
+  padding: 15px 13px 15px 17px;
+  font-family: "Nanum Gothic";
+}
+
+.new-jebid-current-menu-link__active,
+.new-jebid-current-menu-link:hover{
+  color: #2066b4;
+  font-weight: bold;
+  background: url('../images/bl_arrow_right_menu.png') no-repeat right center;
+}
+
+.new-jebid-fixed-left{
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  margin-left: -550px;
+}
+
+.new-jebid-left-area-active{
+  padding-left: 269px;
+  box-sizing: border-box;
+}
