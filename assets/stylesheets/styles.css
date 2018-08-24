@@ -409,6 +409,8 @@ input[type="checkbox"]{
 .table-wrp tr {
   display: table;
   width: 100%;
+  position: relative;
+  cursor: pointer;
 }
 
 .table-wrp td {
@@ -423,3 +425,47 @@ input[type="checkbox"]{
   margin-top: 50px;
 }
 
+.details-table table{
+  width: 100%;
+  border-top: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+}
+
+.details-table table th{
+  background: #f5f5f5;
+  color: #000;
+  font-weight: normal;
+}
+
+.details-table table th,
+.details-table table td{
+  border-bottom: 1px solid #e1e1e1;
+  padding: 20px 15px;
+  border-right: 1px solid #e1e1e1;
+}
+
+.details-area .btn-area{
+  margin-top: 20px;
+  text-align: right;
+}
+
+.details-area .btn-go-direct{
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background: #3893e1;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+}
+
+.btn-go-direct .fa-angle-right{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -9px;
+  font-size: 20px;
+}
