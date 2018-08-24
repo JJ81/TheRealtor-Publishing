@@ -1,21 +1,24 @@
 @charset "UTF-8";
 
-@import './common.css';
-@import './layout.css';
-@import './central.css';
-@import './board.css';
-@import './tab.css';
-
-/*
-  Class name is start with 'new-jebid-'.
-  All codes below shown is published by JCORPORATIONTECH
-  Date : 2018.04.11
-  Author: JCORP.
-  Email : j.lee@jcorporationtech.com
-*/
-
-/* font settings */
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
+
+body{
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,ul,ol{
+  padding: 0;
+}
+
+ol,ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
 
 .new-jebid-body{
   font-family: 'Nanum Gothic', sans-serif !important;
