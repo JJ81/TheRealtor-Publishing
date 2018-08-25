@@ -4,11 +4,11 @@
 
 
 body{
-  margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
+  color: #444;
 }
 
-h1,h2,h3,h4,h5,h6,ul,ol,hr{
+body,h1,h2,h3,h4,h5,h6,ul,ol,hr,p{
   padding: 0;
   margin: 0;
 }
@@ -19,6 +19,10 @@ table,td,th {
 
 ol,ul{
   list-style: none;
+}
+
+address{
+  font-style: normal;
 }
 
 a{
@@ -39,6 +43,8 @@ input{
   outline: none;
 }
 
+
+
 .center{
   text-align: center;
 }
@@ -47,7 +53,8 @@ input{
   height: 86px;
 }
 .j-container,
-.hd-inner{
+.hd-inner,
+footer{
   position: relative;
   max-width: 1300px;
   margin: 0 auto;
@@ -61,11 +68,11 @@ input{
 .input-search-box{
   width: 100%;
   height: 60px;
-  border: 5px solid #3893e1;
+  border: 2px solid #3893e1;
   font-size: 20px;
   color: #666;
   box-sizing: border-box;
-  padding: 0 50px 0 20px;
+  padding: 0 35px 0 20px;
   line-height: 60px;
 }
 
@@ -120,7 +127,7 @@ header{
 }
 
 .search-box-wrap{
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .search-box-wrap .ico-search{
@@ -156,28 +163,34 @@ header{
   display: inline-block;
   width: 80%;
   height: 100px;
-  background: #2066b4;
+  background: #4595ef;
   border-radius: 10px;
   color: #eaeaea;
   font-size: 18px;
   box-sizing: border-box;
   line-height: 26px;
+  border: 2px solid #4595ef;
+}
+
+.recommend-info-wrap .btn-recom-link:hover{
+  border: 2px solid #3567a7;
+  background: #459bf5;
 }
 
 .btn-type-01{
-  padding-top: 27px;
+  padding-top: 25px;
 }
 
 .btn-type-02{
-  padding-top: 35px;
+  padding-top: 33px;
 }
 
 .btn-type-03{
-  padding-top: 35px;
+  padding-top: 33px;
 }
 
 .btn-type-04{
-  padding-top: 35px;
+  padding-top: 33px;
 }
 
 .col-inner-wrp{
@@ -239,7 +252,7 @@ header{
   color: #b9b9b9;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"], img{
   vertical-align: middle;
 }
 
@@ -261,6 +274,11 @@ input[type="checkbox"]{
   font-size: 22px;
   color: #555;
   margin-bottom: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #888;
 }
 
 .recommend-search-info-wrap h3{
@@ -425,6 +443,10 @@ input[type="checkbox"]{
   margin-top: 50px;
 }
 
+.details-table{
+  padding: 0 25px;
+}
+
 .details-table table{
   width: 100%;
   border-top: 1px solid #e1e1e1;
@@ -468,4 +490,47 @@ input[type="checkbox"]{
   right: 10px;
   margin-top: -9px;
   font-size: 20px;
+}
+
+.location-link{
+  color: #3893e1;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.details-table .ref{
+  color: #888;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.usage-desc{
+  padding: 0 30px;
+  white-space: pre-line;
+}
+
+footer .copyright{
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+footer .split{
+  color: #999;
+  margin: 0 5px;
+  font-size: 12px;
+  position: relative;
+  top: -1px;
+}
+
+footer address{
+  font-size: 13px;
+}
+
+footer nav{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+footer nav a:hover{
+  color: #3893e1;
 }
